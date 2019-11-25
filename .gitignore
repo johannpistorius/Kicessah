@@ -172,6 +172,12 @@ fabric.properties
 *.tar.gz
 *.rar
 
+# Project ignore
+serveur/face_detection/.spyder2
+serveur/picture_to_process.jpg
+serveur/image
+*.pyc
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
