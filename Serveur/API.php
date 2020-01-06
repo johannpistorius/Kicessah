@@ -1,7 +1,7 @@
 <?php
 ini_set("display_errors",1);
-$pathDeLImage="picture_to_process.jpg";
-$pathDuProgPython = "test.py";
+$pathDeLImage="face_detection/classification/test_images/picture_to_process.jpg";
+$pathDuProgPython = "face_detection/classification/test.py";
 
 /** Debug thibaud
 if (isset ($_POST['text'])){
