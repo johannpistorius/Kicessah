@@ -15,7 +15,7 @@ if (isset ($_POST['text'])){
 
 if(isset($_FILES['fichier'])){ //On execute le programme qui si il y a un fichier dans la variable 'fichier' de la requete post
 	$file = $_FILES['fichier']['tmp_name'];
-	if(!move_uploaded_file($file,$nomFichier)){ //on la copie dans le serveur au path indiqué
+	if(!move_uploaded_file($file,$pathDeLImage)){ //on la copie dans le serveur au path indiqué
 		echo "\nerreur d'upload";
 	}
 	else{
