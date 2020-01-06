@@ -17,7 +17,7 @@ SCALAR_BLUE = (255.0, 0.0, 0.0)
 
 #######################################################################################################################
 def main():
-    print("starting program . . .")
+    #print("starting program . . .")
 
     if not checkIfNecessaryPathsAndFilesExist():
         return
@@ -34,7 +34,7 @@ def main():
     # end for
 
     # show the classifications to prove out that we were able to read the label file successfully
-    print("classifications = " + str(classifications))
+    #print("classifications = " + str(classifications))
 
     # load the graph from file
     with tf.gfile.FastGFile(RETRAINED_GRAPH_PB_FILE_LOC, 'rb') as retrainedGraphFile:
@@ -61,7 +61,7 @@ def main():
             # end if
 
             # show the file name on std out
-            print(fileName)
+            #print(fileName)
 
             # get the file name and full path of the current image file
             imageFileWithPath = os.path.join(TEST_IMAGES_DIR, fileName)
@@ -86,7 +86,7 @@ def main():
             # sort predictions from most confidence to least confidence
             sortedPredictions = predictions[0].argsort()[-len(predictions[0]):][::-1]
 
-            print("---------------------------------------")
+            #print("---------------------------------------")
 
             # keep track of if we're going through the next for loop for the first time so we can show more info about
             # the first prediction, which is the most likely prediction (they were sorted descending above)
@@ -108,21 +108,22 @@ def main():
                     # get the score as a %
                     scoreAsAPercent = confidence * 100.0
                     # show the result to std out
-                    print("the object appears to be a " + strClassification + ", " + "{0:.2f}".format(scoreAsAPercent) + "% confidence")
+                    #print("the object appears to be a " + strClassification + ", " + "{0:.2f}".format(scoreAsAPercent) + "% confidence")
+                    print(strClassification)
                     # write the result on the image
-                    writeResultOnImage(openCVImage, strClassification + ", " + "{0:.2f}".format(scoreAsAPercent) + "% confidence")
+                    #writeResultOnImage(openCVImage, strClassification + ", " + "{0:.2f}".format(scoreAsAPercent) + "% confidence")
                     # finally we can show the OpenCV image
 #                    openCVImageResize = cv2.resize(openCVImage,(1088,820))
 #                    cv2.imshow(fileName, openCVImageResize)
                     #save the result image in the folder "test_result"
-                    cv2.imwrite(os.path.join(TEST_RESULT_DIR ,'result_' + os.path.basename(imageFileWithPath)),openCVImage)
+                    #cv2.imwrite(os.path.join(TEST_RESULT_DIR ,'result_' + os.path.basename(imageFileWithPath)),openCVImage)
                     # mark that we've show the most likely prediction at this point so the additional information in
                     # this if statement does not show again for this image
                     onMostLikelyPrediction = False
                 # end if
 
                 # for any prediction, show the confidence as a ratio to five decimal places
-                print(strClassification + " (" +  "{0:.5f}".format(confidence) + ")")
+                #print(strClassification + " (" +  "{0:.5f}".format(confidence) + ")")
             # end for
 
             # pause until a key is pressed so the user can see the current image (shown above) and the prediction info
