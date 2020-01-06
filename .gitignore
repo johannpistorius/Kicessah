@@ -173,9 +173,13 @@ fabric.properties
 *.rar
 
 # Project ignore
-serveur/face_detection/.spyder2
-serveur/picture_to_process.jpg
-serveur/image
+serveur/face_detection/database
+serveur/face_detection/data_augmentation/Images
+serveur/face_detection/classification/test_images
+serveur/face_detection/classification/training_images
+serveur/face_detection/classification/bottleneck_data
+serveur/face_detection/classification/tensorboard_logs
+serveur/face_detection/classification/model
 *.pyc
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
