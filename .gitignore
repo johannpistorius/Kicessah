@@ -173,6 +173,7 @@ fabric.properties
 *.rar
 
 # Project ignore
+.idlerc
 serveur/face_detection/database
 serveur/face_detection/data_augmentation/Images
 serveur/face_detection/classification/test_images
