@@ -5,6 +5,8 @@ import tensorflow as tf
 import numpy as np
 import cv2
 
+os.environ['TF_CPP_MIN_LOG_LEVEL']='3'
+
 # module-level variables ##############################################################################################
 RETRAINED_LABELS_TXT_FILE_LOC = os.getcwd() + "/" + "retrained_labels.txt"
 RETRAINED_GRAPH_PB_FILE_LOC = os.getcwd() + "/" + "retrained_graph.pb"
