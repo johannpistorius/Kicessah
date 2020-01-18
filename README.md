@@ -11,8 +11,8 @@ git clone https://github.com/johannpistorius/Kicessah
 
 Afin de lancer le projet, il faudra avoir installer préalablement OpenCV et TensorFlow.
 
-[Guide pour installer TensorFlow](https://www.tensorflow.org/install/pip)
-[Guide pour installer OpenCV](https://docs.opencv.org/3.4.1/d2/de6/tutorial_py_setup_in_ubuntu.html)
+[Guide pour installer TensorFlow](https://www.tensorflow.org/install/pip) 
+[Guide pour installer OpenCV](https://docs.opencv.org/3.4.1/d2/de6/tutorial_py_setup_in_ubuntu.html) 
 
 ## Computer Vision
 
